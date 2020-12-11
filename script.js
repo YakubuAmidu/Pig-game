@@ -18,5 +18,7 @@ btnRoll.addEventListener('click', function () {
   console.log('dice', dice);
   // 2. Display dice
   diceEl.classList.remove('hidden');
+  diceEl.src = `dice-${dice}.png`;
+
   // 3. Check for rolled 1: If true move to the next player.
 });

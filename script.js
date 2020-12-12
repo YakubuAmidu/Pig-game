@@ -33,7 +33,6 @@ const switchPlayer = function () {
 btnRoll.addEventListener('click', function () {
   // 1. Generate random number
   const dice = Math.trunc(Math.random() * 6) + 1;
-  console.log('dice', dice);
 
   // 2. Display dice
   diceEl.classList.remove('hidden');
@@ -47,6 +46,7 @@ btnRoll.addEventListener('click', function () {
       `current--${activePlayer}`
     ).textContent = currentScore;
   } else {
+    // Switch to next player
     switchPlayer();
   }
 });
@@ -56,7 +56,7 @@ btnHold.addEventListener('click', function () {
   scores[activePlayer] += currentScore;
   console.log('activePlayer', activePlayer);
   // scores[1] = scores[1] + currentScore
-  document.getElementById(`current--${activePlayer}`).textContent =
+  document.getElementById(`score--${activePlayer}`).textContent =
     scores[activePlayer];
   // 2. Check if player's score is >= 100
   // Finish the game

@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start:sass": "node-sass sass/main.scss style.css -w"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2",
+    "node-sass": "^7.0.1"
+  }
+}
